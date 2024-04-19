@@ -1,0 +1,41 @@
+<!-- Navigation bar -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #ffffff"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink=""><img src = "https://1000marcas.net/wp-content/uploads/2021/05/Booking.Com-logo.png" height="50"></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+    <a class= "btn btn-outline-secondary float-right" routerLink="/posts/create" role="button">Publicar</a>
+  </div>
+</nav>
+
+<!-- Main Router Outlet -->
+<div class="container-fluid" id="principal">
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="footer-copyright text-center py-2">
+  </div>
+</footer>

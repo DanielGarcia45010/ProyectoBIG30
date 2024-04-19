@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="media g-mb-30 media-comment">
+        <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+          <div class = "g-mb-15">
+            <form>
+              <div class="from-group">
+                <h4 class="h4 g-color-gray-dark-v1 mb-4">Crea una review</h4>
+              </div>
+              <div class="form-group mb-4">
+                <textarea class="form-control" style="height: 200px;" placeholder="Escribe tus pensamientos" rows="3" #textAreaInput></textarea>
+              </div>
+
+            </form>
+            <button class="btn btn-secondary" (click)="getPrediction(textAreaInput.value, content, content1)">Publicar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #content1 let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Review creada</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<p>Hemos subido tu review! Sentimos que tu calificación a nosotros debe ser de: {{ this.classification }}</p>
+	</div>
+	<div class="modal-footer">
+		<a type="button" class="btn btn-outline-dark" (click)="c('Save click')" href="/">OK</a>
+	</div>
+</ng-template>
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Hemos notado que no te ha gustado la experiencia que tuviste en el hotel</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<p>Tu comentario obtuvo una satisfacción de {{ this.classification }}. Por favor contactanos para hacer seguimiento de tu caso</p>
+    <h5>Lineas de ayuda</h5>
+    <p>Están abiertas 24 horas al día, todos los días.</p>
+    <p>300 000 0000 - Hotel Preview</p>
+    <p>0800 58 58 58 - Linea Internacional</p>
+	</div>
+	<div class="modal-footer">
+		<a type="button" class="btn btn-outline-dark" (click)="c('Save click')" href="/">OK</a>
+	</div>
+</ng-template>
+
